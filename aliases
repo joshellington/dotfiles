@@ -45,3 +45,12 @@ alias production-tail='heroku logs --tail --remote production'
 # Heroku databases
 alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+
+# Sublime Text
+alias slt='open -a "/Applications/Sublime Text 2.app"'
+
+# Projects
+alias p='cd ~/Projects/'
+
+# Randoms
+alias e='exit'
