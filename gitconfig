@@ -15,3 +15,7 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
+[your]
+	name = Josh Ellington
+[user]
+	email = hello@joshellington.com
