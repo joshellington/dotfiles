@@ -27,6 +27,8 @@ bindkey "^R" history-incremental-search-backward
 # add some readline keys back
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+bindkey "^B" backward-word
+bindkey "^F" forward-word
 
 # handy keybindings
 bindkey "^P" history-search-backward
@@ -59,7 +61,7 @@ setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
 setopt cdablevars
 
 # Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+# setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
@@ -77,3 +79,6 @@ setopt NUMERIC_GLOB_SORT
 setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+
+# NPM path
+export PATH="/usr/local/share/npm/bin:${PATH}"
