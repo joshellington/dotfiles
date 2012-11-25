@@ -82,3 +82,6 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 
 # NPM path
 export PATH="/usr/local/share/npm/bin:${PATH}"
+
+# Link RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
