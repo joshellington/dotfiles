@@ -14,6 +14,7 @@ alias -g ONE="| awk '{ print \$1}'"
 # git
 alias g="git"
 alias gci="git pull --rebase && rake && git push"
+alias gco="git checkout"
 
 # Bundler
 alias b="bundle"
@@ -54,3 +55,4 @@ alias p='cd ~/Projects/'
 
 # Randoms
 alias e='exit'
+alias flush='dscacheutil -flushcache'
