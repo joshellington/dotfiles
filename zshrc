@@ -75,6 +75,9 @@ setopt NO_CASE_GLOB
 # Be Reasonable!
 setopt NUMERIC_GLOB_SORT
 
+# Leave rake alone
+alias rake='noglob rake'
+
 # Tab completion
 setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
