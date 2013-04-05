@@ -45,8 +45,19 @@ export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 # ignore duplicate history entries
 setopt histignoredups
 
+# enable history saving on shell exit
+HISTFILE=$HOME/.zhistory
+
 # keep TONS of history
 export HISTSIZE=4096
+
+# save history between sessions
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
+# save timestamp and runtime information
+setopt EXTENDED_HISTORY
 
 # look for ey config in project dirs
 export EYRC=./.eyrc
