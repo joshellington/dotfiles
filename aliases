@@ -56,3 +56,4 @@ alias p='cd ~/Projects/'
 # Randoms
 alias e='exit'
 alias flush='dscacheutil -flushcache'
+alias serv='python -m SimpleHTTPServer'
