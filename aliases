@@ -15,6 +15,9 @@ alias -g ONE="| awk '{ print \$1}'"
 alias g="git"
 alias gci="git pull --rebase && rake && git push"
 alias gco="git checkout"
+assume = update-index --assume-unchanged
+unassume = update-index --no-assume-unchanged
+assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 
 # Bundler
 alias b="bundle"
