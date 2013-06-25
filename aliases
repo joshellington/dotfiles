@@ -15,8 +15,8 @@ alias -g ONE="| awk '{ print \$1}'"
 alias g="git"
 alias gci="git pull --rebase && rake && git push"
 alias gco="git checkout"
-alias assume="update-index --assume-unchanged"
-alias unassume="update-index --no-assume-unchanged"
+alias assume="git update-index --assume-unchanged"
+alias unassume="git update-index --no-assume-unchanged"
 alias assumed="!git ls-files -v | grep ^h | cut -c 3-"
 
 # Bundler
@@ -60,3 +60,4 @@ alias p='cd ~/Projects/'
 alias e='exit'
 alias flush='dscacheutil -flushcache'
 alias serv='python -m SimpleHTTPServer'
+alias html5='wget https://github.com/joshellington/html5-boilerplate/archive/master.zip; unzip master.zip -d ./; mv html5-boilerplate-master/* ./; rm master.zip; rm -r html5-boilerplate-master;'
