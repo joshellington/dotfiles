@@ -44,3 +44,7 @@ dump.rdb
 # Zarr #
 ########
 __init__.py
+
+# Pre-processors (SCSS, etc.) #
+######################
+.sass-cache
