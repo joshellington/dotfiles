@@ -26,7 +26,6 @@
 *.sql
 *.sqlite
 *.db
-schema.rb
 
 # OS generated files #
 ######################
