@@ -103,3 +103,15 @@ export PATH="/usr/local/share/npm/bin:${PATH}"
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
 export PATH=$homebrew:$PATH
+
+# Local bin path
+export PATH=$PATH:~/bin
+
+# Editor export
+export EDITOR='subl -w'
+
+# Go exports
+export GOVERSION="1.1.2"
+export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
+export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION/bin
+export PATH=$PATH:$GOPATH/bin
