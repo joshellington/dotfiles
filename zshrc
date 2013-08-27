@@ -115,3 +115,6 @@ export GOVERSION="1.1.2"
 export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
 export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION/bin
 export PATH=$PATH:$GOPATH/bin
+
+# Rails development
+export DEVELOPER=josh
