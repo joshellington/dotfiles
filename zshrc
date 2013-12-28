@@ -8,9 +8,6 @@ compinit
 # automatically enter directories without cd
 setopt auto_cd
 
-# use vim as an editor
-export EDITOR=vim
-
 # aliases
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
@@ -108,7 +105,7 @@ export PATH=$homebrew:$PATH
 export PATH=$PATH:~/bin
 
 # Editor export
-export EDITOR='subl -w'
+export EDITOR=nano
 
 # Go exports
 export GOVERSION="1.1.2"
@@ -118,3 +115,13 @@ export PATH=$PATH:$GOPATH/bin
 
 # Rails development
 export DEVELOPER=josh
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Python development
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+syspip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
