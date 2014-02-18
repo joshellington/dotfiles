@@ -13,6 +13,9 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+# disable local mail check
+unset MAILCHECK
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
