@@ -125,3 +125,8 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# MySQL
+MYSQL=/usr/local/mysql/bin
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
