@@ -50,6 +50,7 @@ HISTFILE=$HOME/.zhistory
 
 # keep TONS of history
 export HISTSIZE=4096
+export SAVEHIST=1000
 
 # save history between sessions
 setopt APPEND_HISTORY
@@ -111,7 +112,7 @@ export PATH=$PATH:~/bin
 export EDITOR=nano
 
 # Go exports
-export GOVERSION="1.1.2"
+export GOVERSION="1.2.2"
 export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
 export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION/bin
 export PATH=$PATH:$GOPATH/bin
@@ -131,3 +132,8 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# MySQL
+MYSQL=/usr/local/mysql/bin
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
