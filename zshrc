@@ -120,6 +120,9 @@ export PATH=$PATH:$GOPATH/bin
 export DEVELOPER=josh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# Export SSL for DO and Rackspace Vagrant stuff
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
 # Python development
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
