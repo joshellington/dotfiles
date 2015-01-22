@@ -140,3 +140,7 @@ syspip(){
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
