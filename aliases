@@ -18,6 +18,7 @@ alias gco="git checkout"
 alias gpl="git pull origin"
 alias gps="git push origin"
 alias gac="git add . -A; git commit"
+alias ga="git commit --amend"
 alias gs="git status"
 alias greset="git fetch origin; git reset --hard origin/master"
 alias assume="git update-index --assume-unchanged"
@@ -57,6 +58,9 @@ alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku p
 
 # Sublime Text
 alias slt='open -a "/Applications/Sublime Text 2.app"'
+
+# iOS Simulator
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # Projects
 alias p='cd ~/Projects/'

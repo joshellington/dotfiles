@@ -129,12 +129,12 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # Python development
 # pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
+# export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-syspip(){
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
+# syspip(){
+#    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+# }
 
 # MySQL
 MYSQL=/usr/local/mysql/bin
