@@ -100,6 +100,8 @@ export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # Link RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
@@ -107,6 +109,9 @@ export PATH=$homebrew:$PATH
 
 # Local bin path
 export PATH=$PATH:~/bin
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
 
 # Editor export
 export EDITOR=nano

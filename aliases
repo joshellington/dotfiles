@@ -6,10 +6,6 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
-alias -g G='| grep'
-alias -g M='| less'
-alias -g L='| wc -l'
-alias -g ONE="| awk '{ print \$1}'"
 
 # git
 alias g="git"
@@ -70,6 +66,6 @@ alias e='exit'
 alias flush='dscacheutil -flushcache'
 alias serv='python -m SimpleHTTPServer'
 alias html5='wget https://github.com/joshellington/html-boilerplate/archive/master.zip; unzip master.zip -d ./; mv html-boilerplate-master/* ./; rm master.zip; rm -r html-boilerplate-master;'
-alias curl='noglob curl'
-alias vhosts='slt /etc/apache2/extra/httpd-vhosts.conf'
-alias hosts='slt /etc/hosts'
+# alias curl='noglob curl'
+alias vhosts='subl /etc/apache2/extra/httpd-vhosts.conf'
+alias hosts='subl /etc/hosts'
