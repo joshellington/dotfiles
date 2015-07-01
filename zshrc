@@ -130,7 +130,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export RACK_ENV="development"
 
 # Export SSL for DO and Rackspace Vagrant stuff
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # Python development
 # pip should only run if there is a virtualenv currently activated
