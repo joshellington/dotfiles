@@ -100,8 +100,6 @@ export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # Link RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
@@ -112,6 +110,9 @@ export PATH=$PATH:~/bin
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+
+# Composer path
+export PATH=$PATH:~/.composer/vendor/bin
 
 # Editor export
 export EDITOR=nano
@@ -149,3 +150,5 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export NVM_DIR="/Users/josh/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
