@@ -99,7 +99,7 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # Link RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source $HOME/.rvm/scripts/rvm
 
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
