@@ -101,6 +101,9 @@ export PATH="/usr/local/share/npm/bin:${PATH}"
 # Link RVM
 source $HOME/.rvm/scripts/rvm
 
+# Link Yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
 export PATH=$homebrew:$PATH
