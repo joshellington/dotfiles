@@ -153,5 +153,5 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export NVM_DIR="/Users/josh/.nvm"
+export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
