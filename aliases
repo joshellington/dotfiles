@@ -69,3 +69,4 @@ alias html5='wget https://github.com/joshellington/html-boilerplate/archive/mast
 # alias curl='noglob curl'
 alias vhosts='atom /etc/apache2/extra/httpd-vhosts.conf'
 alias hosts='atom /etc/hosts'
+alias tedit='open -a TextEdit'
