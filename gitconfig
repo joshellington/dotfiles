@@ -13,7 +13,7 @@
   merge-branch = !git checkout master && git merge @{-1} --ff-only
   rebase-origin = !git fetch origin && git rebase origin/master
 [core]
-	excludesfile = /Users/joshellington/.gitignore
+	excludesfile = /Users/josh/.gitignore
   autocrlf = input
   editor = "atom --wait"
 [your]
