@@ -13,6 +13,11 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+# aliases
+if [ -e "$HOME/.functions" ]; then
+  source "$HOME/.functions"
+fi
+
 # disable local mail check
 unset MAILCHECK
 
