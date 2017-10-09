@@ -53,7 +53,7 @@ alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
 
 # Sublime Text
-alias slt='open -a "/Applications/Sublime Text 2.app"'
+alias slt='open -a "/Applications/Sublime Text.app"'
 
 # iOS Simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
@@ -64,9 +64,9 @@ alias p='cd ~/Projects/'
 # Randoms
 alias e='exit'
 alias flush='dscacheutil -flushcache'
-alias serv='python -m SimpleHTTPServer'
+alias serv='python -m SimpleHTTPServer 9999'
 alias html5='wget https://github.com/joshellington/html-boilerplate/archive/master.zip; unzip master.zip -d ./; mv html-boilerplate-master/* ./; rm master.zip; rm -r html-boilerplate-master;'
 # alias curl='noglob curl'
-alias vhosts='atom /usr/local/etc/apache2/2.4/users/'
-alias hosts='atom /etc/hosts'
+alias vhosts='slt /usr/local/etc/apache2/2.4/users/'
+alias hosts='slt /etc/hosts'
 alias tedit='open -a TextEdit'

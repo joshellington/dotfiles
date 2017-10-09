@@ -6,6 +6,11 @@ function git_prompt_info() {
   fi
 }
 
+function current_time() {
+  ctime=$(date +%T)
+  echo "[%{$fg_bold[yellow]%}${ctime}%{$reset_color%}]"
+}
+
 # makes color constants available
 autoload -U colors
 colors
@@ -18,6 +23,7 @@ setopt prompt_subst
 
 # prompt
 export PS1='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info) '
+export RPROMPT='$(current_time)'
 
 
 ### Added by the Heroku Toolbelt
