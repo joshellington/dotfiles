@@ -158,6 +158,7 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # NVM path
 export NVM_DIR=$HOME/.nvm
