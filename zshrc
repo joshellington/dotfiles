@@ -177,3 +177,5 @@ fi
 if [ -f /private/tmp/google-cloud-sdk/completion.zsh.inc ]; then
   source '/private/tmp/google-cloud-sdk/completion.zsh.inc'
 fi
+
+export PATH=~/Library/Python/3.6/bin:$PATH
