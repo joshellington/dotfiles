@@ -165,7 +165,7 @@ export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # PHP CLI path
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+# export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 # export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
@@ -180,3 +180,6 @@ if [ -f /private/tmp/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 export PATH=~/Library/Python/3.6/bin:$PATH
+
+# Flutter
+export PATH=$PATH:$HOME/flutter/bin

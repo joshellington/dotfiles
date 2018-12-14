@@ -61,7 +61,7 @@ __init__.py
 *.class
 
 # Generated files
-bin/
+# bin/
 gen/
 
 # Gradle files
