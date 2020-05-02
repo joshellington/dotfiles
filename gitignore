@@ -76,3 +76,5 @@ proguard/
 
 # Log Files
 *.log
+
+inc/cache

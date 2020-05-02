@@ -247,12 +247,7 @@ function tre() {
 
 # Open a pull request for the current branch on BitBucket
 function pr() {
-  # Get the current branch name from git
-  branch=$(git rev-parse --abbrev-ref HEAD)
-
-  # Parse username/repo for full URL
-  repo_name=$(git remote -v | grep -m 1 "(push)" | sed -e "s/.*bitbucket.org[:/]\(.*\)\.git.*/\1/")
-
-  # Open the (nicely reliable) url for a pull request to that branch
-  open https://bitbucket.org/$repo_name/pull-requests/new?source=$branch&t=1
+  branch=`git rev-parse --abbrev-ref HEAD`
+  github_url=`git remote get-url origin | sed 's/....$//'`
+  open $github_url/compare/$branch?expand=1
 }

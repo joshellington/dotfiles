@@ -104,10 +104,10 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # Link RVM
-source $HOME/.rvm/scripts/rvm
+# source $HOME/.rvm/scripts/rvm
 
 # Link Yarn
-export PATH="$PATH:$HOME/.yarn/bin"
+# export PATH="$PATH:$HOME/.yarn/bin"
 
 # Fix Homebrew path
 homebrew=/usr/local/bin:/usr/local/sbin
@@ -145,10 +145,16 @@ export RACK_ENV="development"
 # pip should only run if there is a virtualenv currently activated
 # export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # syspip(){
 #    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 # }
+#export PYTHONPATH="/usr/local/Cellar/python/3.7.3/bin/python3:$PYTHONPATH"
+
+# PYENV, python
+export PATH="/Users/joshellington/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # MySQL
 MYSQL=/usr/local/mysql/bin
@@ -160,26 +166,45 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-# NVM path
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # PHP CLI path
 # export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 # export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /private/tmp/google-cloud-sdk/path.zsh.inc ]; then
-  source '/private/tmp/google-cloud-sdk/path.zsh.inc'
-fi
+# export PATH=~/Library/Python/3.6/bin:$PATH
 
-# The next line enables shell command completion for gcloud.
-if [ -f /private/tmp/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/private/tmp/google-cloud-sdk/completion.zsh.inc'
-fi
-
-export PATH=~/Library/Python/3.6/bin:$PATH
+# export PATH=~/anaconda2/bin:$PATH
 
 # Flutter
-export PATH=$PATH:$HOME/flutter/bin
+export PATH=$PATH:$HOME/flutter/binexport PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+# FRESH
+export PATH=/usr/local/fresh-public-scripts/bin:$PATH
+PHP_VERSION=$(ls /Applications/MAMP/bin/php/ | sort -n | tail -1)
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+alias wp='php /Applications/MAMP/bin/php/${PHP_VERSION}/bin/wp-cli.phar'
+#alias composer='php /usr/local/bin/composer.phar'
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/joshellington/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/joshellington/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/completion.zsh.inc'; fi
+
+# RUBY rbenv
+eval "$(rbenv init -)"
