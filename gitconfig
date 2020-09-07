@@ -13,12 +13,37 @@
   merge-branch = !git checkout master && git merge @{-1} --ff-only
   rebase-origin = !git fetch origin && git rebase origin/master
 [core]
-	excludesfile = /Users/josh/.gitignore
+	excludesfile = /Users/joshellington/.gitignore
   autocrlf = input
-	editor = subl -n -w
+	editor = code --wait
 [your]
 	name = Josh Ellington
 [user]
-	email = hello@joshellington.com
+	email = josh.ellington@freshconsulting.com
+	name = Josh Ellington
 [heroku]
 	account = personal
+[http]
+	cookiefile = /Users/joshellington/.gitcookies
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
