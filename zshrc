@@ -152,9 +152,9 @@ export RACK_ENV="development"
 #export PYTHONPATH="/usr/local/Cellar/python/3.7.3/bin/python3:$PYTHONPATH"
 
 # PYENV, python
-export PATH="/Users/joshellington/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PATH="/Users/joshellington/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # MySQL
 # MYSQL=/usr/local/mysql/bin
@@ -211,4 +211,4 @@ export PATH=~/Library/Python/3.6/bin:$PATH
 # Flutter
 export PATH=$PATH:$HOME/flutter/bin
 # RUBY rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
