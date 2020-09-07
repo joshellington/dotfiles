@@ -104,7 +104,7 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 export PATH="/usr/local/share/npm/bin:${PATH}"
 
 # Link RVM
-source $HOME/.rvm/scripts/rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Link Yarn
 export PATH="$PATH:$HOME/.yarn/bin"
@@ -133,7 +133,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # Rails development
 export DEVELOPER=josh
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Rack development
 export RACK_ENV="development"
@@ -151,9 +151,9 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # }
 
 # MySQL
-MYSQL=/usr/local/mysql/bin
-export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+# MYSQL=/usr/local/mysql/bin
+# export PATH=$PATH:$MYSQL
+# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk

@@ -76,3 +76,6 @@ proguard/
 
 # Log Files
 *.log
+
+# Node modules
+node_modules/*
