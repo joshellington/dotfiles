@@ -133,7 +133,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # Rails development
 export DEVELOPER=josh
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Rack development
 export RACK_ENV="development"
@@ -161,6 +160,9 @@ export RACK_ENV="development"
 # export PATH=$PATH:$MYSQL
 # export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -177,13 +179,6 @@ export NVM_DIR="$HOME/.nvm"
 # export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
-# export PATH=~/Library/Python/3.6/bin:$PATH
-
-# export PATH=~/anaconda2/bin:$PATH
-
-# Flutter
-export PATH=$PATH:$HOME/flutter/binexport PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -194,21 +189,14 @@ export PATH=$PATH:$HOME/flutter/binexport PATH="/usr/local/opt/mysql@5.7/bin:$PA
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
-# FRESH
-export PATH=/usr/local/fresh-public-scripts/bin:$PATH
-PHP_VERSION=$(ls /Applications/MAMP/bin/php/ | sort -n | tail -1)
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
-alias wp='php /Applications/MAMP/bin/php/${PHP_VERSION}/bin/wp-cli.phar'
-#alias composer='php /usr/local/bin/composer.phar'
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/joshellington/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/joshellington/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH=~/Library/Python/3.6/bin:$PATH
-
 # Flutter
-export PATH=$PATH:$HOME/flutter/bin
+# export PATH=$PATH:$HOME/flutter/bin
+
 # RUBY rbenv
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
