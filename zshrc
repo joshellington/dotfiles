@@ -152,8 +152,8 @@ export RACK_ENV="development"
 
 # PYENV, python
 # export PATH="/Users/joshellington/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # MySQL
 # MYSQL=/usr/local/mysql/bin
@@ -189,14 +189,14 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/joshellington/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/joshellington/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/joshellington/google-cloud-sdk/completion.zsh.inc'; fi
-
 # Flutter
 # export PATH=$PATH:$HOME/flutter/bin
 
 # RUBY rbenv
 eval "$(rbenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/josh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josh/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/josh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josh/google-cloud-sdk/completion.zsh.inc'; fi
