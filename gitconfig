@@ -47,3 +47,5 @@
 	trustExitCode = true
 [mergetool]
 	keepBackup = false
+[pull]
+	rebase = false

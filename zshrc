@@ -126,10 +126,11 @@ export PATH=$PATH:~/.composer/vendor/bin
 export EDITOR=nano
 
 # Go exports
-export GOVERSION="1.2.2"
-export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION
-export GOPATH=$(brew --prefix)/Cellar/go/$GOVERSION/bin
-export PATH=$PATH:$GOPATH/bin
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 # Rails development
 export DEVELOPER=josh
