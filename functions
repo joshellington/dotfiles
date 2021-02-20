@@ -251,3 +251,13 @@ function pr() {
   github_url=`git remote get-url origin | sed 's/....$//'`
   open $github_url/compare/$branch?expand=1
 }
+
+# setup go dev
+function go_dev() {
+	# Go exports
+	export GOPATH="${HOME}/.go"
+	export GOROOT="$(brew --prefix golang)/libexec"
+	export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+	test -d "${GOPATH}" || mkdir "${GOPATH}"
+	test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+}

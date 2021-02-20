@@ -1,3 +1,14 @@
+# profiling
+# zmodload zsh/datetime
+# setopt PROMPT_SUBST
+# PS4='+$EPOCHREALTIME %N:%i> '
+
+# logfile=$(mktemp zsh_profile.XXXXXXXX)
+# echo "Logging to $logfile"
+# exec 3>&2 2>$logfile
+
+# setopt XTRACE
+
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
@@ -125,13 +136,6 @@ export PATH=$PATH:~/.composer/vendor/bin
 # Editor export
 export EDITOR=nano
 
-# Go exports
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
-
 # Rails development
 export DEVELOPER=josh
 
@@ -201,3 +205,10 @@ if [ -f '/Users/josh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josh/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/josh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josh/google-cloud-sdk/completion.zsh.inc'; fi
+
+# rust
+source "$HOME/.cargo/env"
+
+# profiling
+# unsetopt XTRACE
+# exec 2>&3 3>&-
